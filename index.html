@@ -3,10 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assests/css/styles.css">
+    <title>Welcome to My Portfolio</title>
+    <link rel="stylesheet" href="assests/css/styles.css">
 </head>
 <body>
+    <header>
+        <h1>Brittany K. F. Reyes</h1>
+        <img src="your-photo.jpg" alt="Your Photo" class="avatar">
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a young female web developer who is passionate about creating responsive and user-friendly applications. I am well versed in JavaScript, Express, SQL and more. I look forward to future connections.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project-card large">
+                <h3>Project 1 : Weather Dashboard Application</h3>
+                <a href="file:///Users/brittanyreyes/bootcamp/Weather-Dashboard/index.html" target="_blank">
+                    <img src="project1-thumbnail.jpg" alt="Project 1 Screenshot">
+                </a>
+                <p>This project is a weather dashboard app that is high speed and extremely user friendly. At one click of a button you will get a 5 day forcast of any and every place around the world.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2 : askME</h3>
+                <a href="file:///Users/brittanyreyes/bootcamp/askme/index.html" target="_blank">
+                    <img src="project2-thumbnail.jpg" alt="Project 2 Screenshot">
+                </a>
+                <p>"askME" is an anonymous Q&A application where users are able to ask any and everything they would like without the exposure of their identity. Users are also able to like and comment on other posts, while also being able to sign in to archive their pervious posts.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3 : Pre-work Study Guide</h3>
+                <a href="file:///Users/brittanyreyes/bootcamp/prework-study-guide/index.html" target="_blank">
+                    <img src="project3-thumbnail.jpg" alt="Project 3 Screenshot">
+                </a>
+                <p>This is a pre work study guide created for users who are starting their coding careers. The application contains information and tips on topics that all coders will learn in the field such as HTML, Git, JavaScript and more.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="Brittanyk.reyes@gmail.com"></a></p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
